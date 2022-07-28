@@ -19,15 +19,15 @@ const PlanetSection = ({ title, value }) => {
   );
 };
 
-// import {
-// EarthSvg,
-//   JupiterSvg,
-//   MarsSvg,
-//   NeptuneSvg,
-//   SaturnSvg,
-//   UranusSvg,
-//   VenusSvg,
-// } from "../svg";
+import {
+  EarthSvg,
+  JupiterSvg,
+  MarsSvg,
+  NeptuneSvg,
+  SaturnSvg,
+  UranusSvg,
+  VenusSvg,
+} from "../svg";
 export default function Details({ route }) {
   const planet = route.params.planet;
   const {
@@ -40,26 +40,26 @@ export default function Details({ route }) {
     wikiLink,
   } = planet;
   // svg k planet name er sathe match korbe
-  // const renderImage = (name) => {
-  //   switch (name) {
-  //     case "mercury":
-  //       return <MercurySvg />;
-  // case "earth":
-  //   return <EarthSvg />;
-  // case "jupiter":
-  //   return <JupiterSvg />;
-  // case "mars":
-  //   return <MarsSvg />;
-  // case "neptune":
-  //   return <NeptuneSvg />;
-  // case "saturn":
-  //   return <SaturnSvg />;
-  // case "uranus":
-  //   return <UranusSvg />;
-  // case "venus":
-  //   return <VenusSvg />;
-  //   }
-  // };
+  const renderImage = (name) => {
+    switch (name) {
+      case "mercury":
+        return <MercurySvg />;
+      case "earth":
+        return <EarthSvg />;
+      case "jupiter":
+        return <JupiterSvg />;
+      case "mars":
+        return <MarsSvg />;
+      case "neptune":
+        return <NeptuneSvg />;
+      case "saturn":
+        return <SaturnSvg />;
+      case "uranus":
+        return <UranusSvg />;
+      case "venus":
+        return <VenusSvg />;
+    }
+  };
 
   // wikipedia press function
   const onPressLink = () => {
@@ -71,7 +71,7 @@ export default function Details({ route }) {
 
       <ScrollView>
         <Text></Text>
-        {/* <View style={styles.planetImage}>{renderImage(name)}</View> */}
+        <View style={styles.planetImage}>{renderImage(name)}</View>
         <View style={styles.detailsView}>
           <Text preset="h1" style={styles.name}>
             {name}
@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: spacing[5],
     paddingVertical: spacing[4],
     borderWidth: 1,
-    borderColor: colors.grey,
+    borderColor: colors.white,
     marginHorizontal: spacing[6],
     marginBottom: spacing[4],
   },
